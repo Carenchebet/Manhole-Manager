@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <!-- Dashboard Menu Item -->
+    <item
+        android:id="@+id/action_dashboard"
+        android:icon="@drawable/ic_home"
+        android:title="Dashboard"
+        />
+
+    <!-- Manholes Menu Item -->
+    <item
+        android:id="@+id/action_manholes"
+        android:icon="@drawable/man"
+        android:title="Manholes" />
+
+
+    <!-- Technicians Menu Item -->
+    <item
+        android:id="@+id/action_technicians"
+        android:icon="@drawable/ic_technicians"
+        android:title="Technicians"
+        />
+
+</menu>

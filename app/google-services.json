@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "135267896379",
+    "project_id": "manhole-manager",
+    "storage_bucket": "manhole-manager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135267896379:android:eb03f6e06db0f3d521e01e",
+        "android_client_info": {
+          "package_name": "ft.cn.manholemanager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHhMHXh0d9gN4oAMpKmdIRsGi9gXDP4Wk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

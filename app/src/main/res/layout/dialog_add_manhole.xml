@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_corners"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:background="@drawable/round_corners"
+        android:id="@+id/editTextLocation"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Location" />
+
+    <EditText
+        android:background="@drawable/round_corners"
+        android:id="@+id/editTextStatus"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Status" />
+
+    <EditText
+        android:padding="10dp"
+        android:background="@drawable/round_corners"
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Manhole Name" />
+
+    <EditText
+        android:padding="10dp"
+        android:background="@drawable/round_corners"
+        android:id="@+id/editTextRegion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Region" />
+</LinearLayout>
