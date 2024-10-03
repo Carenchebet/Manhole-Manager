@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import com.google.android.material.textfield.TextInputEditText
 import ft.cn.manholemanager.models.Technician
 import com.google.firebase.database.DatabaseReference
@@ -27,7 +28,11 @@ class AddNewTechnician : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_new_technician)
-
+        val toolbar: Toolbar =findViewById(R.id.toolbar)
+        supportActionBar?.setIcon(R.drawable.man)  // Custom icon
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_back)
         // Initialize Firebase Database
         database = FirebaseDatabase.getInstance().getReference("Technicians")
 

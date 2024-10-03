@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.DataSnapshot
@@ -32,7 +33,7 @@ class ManholesFragment : Fragment() {
         fetchManholesFromFirebase(recyclerView)
 
         // Set up Add Manhole button click listener
-        val addManholeButton = view.findViewById<Button>(R.id.addManholeButton)
+        val addManholeButton = view.findViewById<ImageButton>(R.id.addManholeButton)
         addManholeButton.setOnClickListener {
             showAddManholeDialog()  // Show the form dialog to add a new manhole
         }
@@ -53,11 +54,11 @@ class ManholesFragment : Fragment() {
                     FibreOpticsManhole(manholeSnapshot.child("location").value.toString(),
                         manholeSnapshot.child("maintainanceStatus").value.toString(),
                         manholeSnapshot.child("locationName").value.toString(),
-                        manholeSnapshot.child("region").value.toString())
+                        manholeSnapshot.child("region").value.toString(),manholeSnapshot.child("id").value.toString())
                     val manhole = FibreOpticsManhole(manholeSnapshot.child("location").value.toString(),
                         manholeSnapshot.child("maintainanceStatus").value.toString(),
                         manholeSnapshot.child("locationName").value.toString(),
-                        manholeSnapshot.child("region").value.toString())
+                        manholeSnapshot.child("region").value.toString(),manholeSnapshot.child("id").value.toString())
                     manhole?.let {
                         manholes.add(it)
                     }
@@ -95,7 +96,7 @@ class ManholesFragment : Fragment() {
                 val region = regionEditText.text.toString()
 
                 // Create a new FibreOpticsManhole object
-                val newManhole = FibreOpticsManhole(location, status, name, region)
+                val newManhole = FibreOpticsManhole(location, status, name, region,id="")
 
                 // Add the manhole to Firebase
                 addManholeToFirebase(newManhole)
@@ -110,8 +111,8 @@ class ManholesFragment : Fragment() {
         val manholeRef = database.reference.child("manholes")
 
         // Generate a new ID for each manhole
-        val manholeId = manholeRef.push().key
-
+        var manholeId = manholeRef.push().key
+         manhole.id=manholeId.toString()
         // Add manhole to Firebase
         manholeId?.let {
             manholeRef.child(it).setValue(manhole)

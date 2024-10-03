@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/round_corners"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -15,6 +14,7 @@
         android:hint="Location" />
 
     <EditText
+        android:layout_marginTop="10dp"
         android:background="@drawable/round_corners"
         android:id="@+id/editTextStatus"
         android:padding="10dp"
@@ -23,6 +23,8 @@
         android:hint="Status" />
 
     <EditText
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:padding="10dp"
         android:background="@drawable/round_corners"
         android:id="@+id/editTextName"
@@ -32,6 +34,7 @@
 
     <EditText
         android:padding="10dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/round_corners"
         android:id="@+id/editTextRegion"
         android:layout_width="match_parent"

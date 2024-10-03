@@ -8,7 +8,12 @@
     android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".ManholesFragment">
-    <Button
+    <ImageButton
+        android:padding="10dp"
+        android:background="@drawable/round_corners"
+        android:backgroundTint="#953213"
+        android:layout_gravity="right"
+        android:src="@android:drawable/ic_input_add"
         android:id="@+id/addManholeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
