@@ -2,7 +2,7 @@
     <string name="app_name">Manhole Manager</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-<!-- Other string resources -->
+    <!-- Other string resources -->
     <string name="availability_status_label">Availability Status</string>
 
     <string-array name="availability_status_options">
@@ -11,11 +11,11 @@
         <item>On Leave</item>
         <item>Busy</item>
     </string-array>
-<string-array name="expertise_options">
-    <item>Network Installation</item>
-    <item>Maintenance</item>
-    <item>Inspection</item>
-    <item>Repair</item>
-    <item>Upgrade</item>
-</string-array>
+    <string-array name="expertise_options">
+        <item>Network Installation</item>
+        <item>Maintenance</item>
+        <item>Inspection</item>
+        <item>Repair</item>
+        <item>Upgrade</item>
+    </string-array>
 </resources>

@@ -1,6 +1,7 @@
 package ft.cn.manholemanager
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -24,7 +25,10 @@ class ManholesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_manholes, container, false)
-
+val openMap:Button=view.findViewById(R.id.btnMap)
+        openMap.setOnClickListener {
+            startActivity(Intent(requireContext(),MapActivity::class.java))
+        }
         // Set LayoutManager for RecyclerView
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
